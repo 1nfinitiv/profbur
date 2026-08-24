@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Домен сайта — профбур-нт.рф. Записан в punycode (xn--...) — это
+  ASCII-совместимая форма кириллических IDN-доменов, обязательная для
+  sitemap.xml. Поисковики (Яндекс и Google) корректно сопоставляют её
+  с читаемым доменом.
+  Сайт сейчас состоит из одной страницы (лендинг с якорными разделами),
+  поэтому в карте сайта указан только адрес главной страницы.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://xn----9sb1bbegcsfi.xn--p1ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

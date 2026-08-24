@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Домен сайта — профбур-нт.рф (в punycode: xn----9sb1bbegcsfi.xn--p1ai)
+Sitemap: https://xn----9sb1bbegcsfi.xn--p1ai/sitemap.xml
