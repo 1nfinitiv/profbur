@@ -1,5 +1,6 @@
 import { CallButton } from "./CallActions";
 import { Reveal } from "./Reveal";
+import { SERVICE_RADIUS_KM } from "@/lib/site";
 
 const meters = [
   { soil: "Бурение артезианской скважины (до 120 м)", price: "1 400 ₽ / метр" },
@@ -23,7 +24,7 @@ export function Prices() {
           <h2 className="text-3xl sm:text-4xl">Цены — информационно</h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
             Бурение — 1 400 ₽ за метр, обсадная труба оплачивается отдельно. Заказы
-            берём только в радиусе 300 км от Нижнего Тагила. Пенсионерам и участникам
+            берём только в радиусе {SERVICE_RADIUS_KM} км от Нижнего Тагила. Пенсионерам и участникам
             СВО — скидка.
           </p>
         </Reveal>

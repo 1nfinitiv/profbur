@@ -14,7 +14,36 @@ export const MAX_HREF = (import.meta.env.VITE_MAX_URL as string | undefined) || 
 export const COMPANY = "ПрофБур";
 export const WORK_HOURS = "Пн–Сб, 08:00 — 22:00";
 export const SERVICE_AREA = "Нижний Тагил и Свердловская область";
-export const RADIUS = "Работаем в радиусе 300 км";
+export const SERVICE_RADIUS_KM = 150;
+export const RADIUS = `Работаем в радиусе ${SERVICE_RADIUS_KM} км`;
+
+/** Города выезда в радиусе ~150 км от Нижнего Тагила */
+export const SERVICE_CITIES = [
+  "Нижний Тагил",
+  "Невьянск",
+  "Алапаевск",
+  "Краснотурьинск",
+  "Качканар",
+  "Серов",
+  "Верхняя Салда",
+  "Нижняя Салда",
+  "Каменск-Уральский",
+  "Богданович",
+  "Первоуральск",
+  "Ревда",
+  "Полевской",
+  "Красноуральск",
+  "Кушва",
+  "Верхняя Тура",
+  "Екатеринбург",
+] as const;
+
+export const SERVICE_CITIES_TEXT = SERVICE_CITIES.join(", ");
+
+export const SEO_TITLE =
+  "Бурение скважин на воду — Нижний Тагил, Серов, Качканар, Екатеринбург | ПрофБур";
+
+export const SEO_DESCRIPTION = `Бурение артезианских скважин на воду до 120 м в Нижнем Тагиле и городах в радиусе ${SERVICE_RADIUS_KM} км: ${SERVICE_CITIES.slice(1, 8).join(", ")} и другие. Обустройство, монтаж насоса, ремонт. Опыт более 10 лет, договор и гарантия.`;
 export const ADDRESS = "Нижний Тагил, ул. Пархоменко, Ленинский район";
 export const MIN_ORDER = "от 70 000 ₽";
 export const EXPERIENCE = "Опыт более 10 лет";

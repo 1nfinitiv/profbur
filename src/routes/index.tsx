@@ -11,11 +11,11 @@ import { Prices } from "@/components/landing/Prices";
 import { Contacts } from "@/components/landing/Contacts";
 import { StickyCallBar, StickyMessengers } from "@/components/landing/StickyCall";
 import { initAnalytics } from "@/lib/analytics";
-import { SITE_URL } from "@/lib/site";
+import { SEO_DESCRIPTION, SEO_TITLE, SITE_URL } from "@/lib/site";
+import { ServiceArea } from "@/components/landing/ServiceArea";
 
-const title = "Бурение скважин на воду в Нижнем Тагиле — ПрофБур";
-const description =
-  "Бурение артезианских скважин на воду до 120 м в Нижнем Тагиле и Свердловской области. Обустройство, монтаж насоса, ремонт скважин. Опыт более 10 лет, договор и гарантия.";
+const title = SEO_TITLE;
+const description = SEO_DESCRIPTION;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,6 +50,7 @@ function Index() {
         <DrillTypes />
         <Gallery />
         <Prices />
+        <ServiceArea />
         <Contacts />
       </main>
       <StickyCallBar />

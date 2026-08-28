@@ -1,6 +1,6 @@
 import { MapPin, Clock } from "lucide-react";
 import { CallButton, MessengerLinks, PhoneLink } from "./CallActions";
-import { SERVICE_AREA, WORK_HOURS, COMPANY, ADDRESS, RADIUS } from "@/lib/site";
+import { SERVICE_AREA, WORK_HOURS, COMPANY, ADDRESS, RADIUS, SERVICE_CITIES_TEXT, SERVICE_RADIUS_KM } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 export function Contacts() {
@@ -53,20 +53,21 @@ export function Contacts() {
             <div className="mt-3 overflow-hidden rounded-sm border border-steel-foreground/15">
               <iframe
                 title="Карта зоны обслуживания"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=59.6%2C57.75%2C60.35%2C58.08&layer=mapnik&marker=57.9195%2C59.9650"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=57.405%2C56.57%2C62.525%2C59.27&layer=mapnik&marker=57.9195%2C59.9650"
                 loading="lazy"
                 className="h-[320px] w-full border-0 sm:h-[420px]"
               />
             </div>
             <p className="mt-3 text-sm text-steel-foreground/60">
-              Нижний Тагил, ул. Пархоменко. Выезжаем по всему городу и Свердловской
-              области — дальние адреса обсуждаем по телефону.
+              Нижний Тагил, ул. Пархоменко. Выезжаем в города в радиусе {SERVICE_RADIUS_KM}{" "}
+              км: {SERVICE_CITIES_TEXT}. Дальние адреса обсуждаем по телефону.
             </p>
           </Reveal>
         </div>
 
         <p className="mt-14 border-t border-steel-foreground/15 pt-6 text-sm text-steel-foreground/50">
-          © {new Date().getFullYear()} {COMPANY}. Бурение артезианских скважин на воду в Нижнем Тагиле.
+          © {new Date().getFullYear()} {COMPANY}. Бурение артезианских скважин на воду в
+          Нижнем Тагиле и Свердловской области.
         </p>
       </div>
     </section>

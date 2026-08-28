@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { COMPANY, PHONE_RAW, SERVICE_AREA, ADDRESS, SITE_URL } from "../lib/site";
+import { COMPANY, PHONE_RAW, ADDRESS, SITE_URL, SERVICE_CITIES, SERVICE_RADIUS_KM } from "../lib/site";
 import ogImage from "../assets/hero-rig.jpg";
 
 function NotFoundComponent() {
@@ -129,7 +129,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressRegion: "Свердловская область",
             addressCountry: "RU",
           },
-          areaServed: SERVICE_AREA,
+          areaServed: [
+            {
+              "@type": "GeoCircle",
+              geoMidpoint: {
+                "@type": "GeoCoordinates",
+                latitude: 57.9195,
+                longitude: 59.965,
+              },
+              geoRadius: `${SERVICE_RADIUS_KM * 1000}`,
+            },
+            ...SERVICE_CITIES.map((city) => ({
+              "@type": "City" as const,
+              name: city,
+              containedInPlace: {
+                "@type": "AdministrativeArea",
+                name: "Свердловская область",
+              },
+            })),
+          ],
           openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: [

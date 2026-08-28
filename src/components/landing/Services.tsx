@@ -1,5 +1,6 @@
 import { CallButton } from "./CallActions";
 import { Reveal } from "./Reveal";
+import { SERVICE_RADIUS_KM } from "@/lib/site";
 
 const services = [
   {
@@ -36,7 +37,9 @@ export function Services() {
         <Reveal>
           <h2 className="text-3xl sm:text-4xl">Услуги</h2>
           <p className="mt-3 max-w-xl text-steel-foreground/75">
-            Полный цикл работ по скважине в Нижнем Тагиле и области: бурение, обустройство, насос, ремонт. Работаем по договору, с гарантией, материалы закупаем сами.
+            Полный цикл работ по скважине в Нижнем Тагиле и городах в радиусе{" "}
+            {SERVICE_RADIUS_KM} км: бурение, обустройство, насос, ремонт. Работаем по
+            договору, с гарантией, материалы закупаем сами.
           </p>
         </Reveal>
 

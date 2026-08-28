@@ -10,6 +10,7 @@ const links = [
   { href: "#types", label: "Виды бурения" },
   { href: "#gallery", label: "Галерея" },
   { href: "#prices", label: "Цены" },
+  { href: "#area", label: "География" },
   { href: "#contacts", label: "Контакты" },
 ];
 

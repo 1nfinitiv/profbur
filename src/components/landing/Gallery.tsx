@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "./Reveal";
+import compactHouse from "@/assets/gallery-compact-house-yard.jpg";
+import compactOpen from "@/assets/gallery-compact-open-site.jpg";
+import compactFoundation from "@/assets/gallery-compact-foundation.jpg";
 import kamaz from "@/assets/gallery-kamaz-truck.jpg";
 import narrow from "@/assets/gallery-narrow-yard.jpg";
 import mast from "@/assets/gallery-drilling-site.jpg";
@@ -8,6 +11,21 @@ import site from "@/assets/gallery-under-construction.jpg";
 import water from "@/assets/gallery-water-flow.png";
 
 const slides = [
+  {
+    src: compactHouse,
+    tag: "Малогабаритная установка",
+    caption: "Основной объём работ — гусеничная установка в узком проезде между домом и забором",
+  },
+  {
+    src: compactOpen,
+    tag: "На любом участке",
+    caption: "Малогабаритная буровая заезжает туда, куда не проходит большая техника",
+  },
+  {
+    src: compactFoundation,
+    tag: "Бурение у дома",
+    caption: "Работаем рядом со строящимся домом и фундаментом без лишней грязи на участке",
+  },
   {
     src: kamaz,
     tag: "УРБ на КАМАЗе",
@@ -55,7 +73,8 @@ export function Gallery() {
       <Reveal>
         <h2 className="text-3xl sm:text-4xl">Наши работы</h2>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Реальные фото с объектов: техника, бурение с промывкой и результат.
+          Реальные фото с объектов: малогабаритная гусеничная установка, бурение с
+          промывкой и результат.
         </p>
       </Reveal>
 
@@ -107,7 +126,7 @@ export function Gallery() {
           </div>
         </div>
 
-        <div className="mt-3 grid grid-cols-5 gap-2">
+        <div className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-4 lg:grid-cols-8">
           {slides.map((s, i) => (
             <button
               key={s.tag}
